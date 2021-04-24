@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="header">
+      <div><button type="button" name="button"  class="box btn" id="homeBtn">home</button></div>
+      <div><button type="button" name="button" class="box btn" id="userBtn">user</button></div>
+      <div><button type="button" name="button" class="box btn" id="depositBtn">deposite</button></div>
+      <div><button class="box btn" id="expenseBtn">expense</button></div>
+      <div><button type="button" name="button" class="box btn" id="categoryBtn">category</button></div>
+      <div><button type="button" name="button" class="box btn" id="millBtn">mill chart</button></div>
+    </div>
+
+    <div class="homeSec">
+
+    </div>
+    <div class="userSec">
+          <!-- <h1 class="heading1">Welcome to user section</h1>
+        <div class="addBtn">
+          <button type="button" name="button" class="btn btnUser"> + add user</button>
+        </div> -->
+
+          <form class="form" action="" method="post" name="userForm" >
+            <input type="text" name="userName" value="" placeholder="user name" required>
+            <input type="text" name="phone" value="" placeholder="phone number" required>
+            <div class="btn-box">
+              <button type="button" name="button" class="btn userAdd">Add</button>
+            </div>
+          </form>
+
+        <table class="table">
+          <thead id="t_head">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Deposite</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody id="tbodyUse" class="tbody">
+
+          </tbody>
+        </table>
+    </div>
+
+
+
+    <div class="depositeSec">
+          <!-- <h1 class="heading1">Welcome to deposite section</h1>
+        <div class="addBtn">
+          <button type="button" name="button" class="btn btnDep"> + add deposite</button>
+        </div> -->
+
+          <form class="form" action="" method="post" name="depositeForm" >
+            <input type="text" name="userId" value="" placeholder="user id" required>
+            <input type="text" name="amount" value="" placeholder="amount" required>
+            <input type="text" name="categoryId" value="" placeholder="Category Id" required>
+            <div class="btn-box">
+              <button type="button" name="button" class="btn depositAdd">Add</button>
+            </div>
+          </form>
+
+        <table class="table">
+          <thead id="t_head">
+          <tr>
+            <th>Id</th>
+            <th>User id</th>
+            <th>Category Id</th>
+            <th>Amount</th>
+            <th>create At</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody id="tbodyDep" class="tbody">
+
+          </tbody>
+        </table>
+    </div>
+
+
+    <div class="expenseSec">
+          <!-- <h1 class="heading1">Welcome to expense section</h1>
+        <div class="addBtn">
+          <button type="button" name="button" class="btn btnExp"> + add expense</button>
+        </div> -->
+
+          <form class="form expenseForm" action="" method="post" name="expenseForm" >
+            <input type="text" name="userId" value="" placeholder="user id" required>
+            <input type="text" name="categoryId" value="" placeholder="category id" required>
+            <input type="text" name="given" value="" placeholder="given amount" required>
+            <input type="text" name="cost" value="" placeholder="cost amount" required>
+            <input type="text" name="description" value="" placeholder="description" required>
+            <div class="btn-box">
+              <button type="button" name="button" class="btn expenseAdd">Add</button>
+            </div>
+          </form>
+
+        <table class="table">
+          <thead id="t_head">
+          <tr>
+            <th>Id</th>
+            <th>User id</th>
+            <th>Category Id</th>
+            <th>given</th>
+            <th> cost</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody id="tbodyExp" class="tbody">
+
+          </tbody>
+        </table>
+    </div>
+
+    <div class="categorySec" class="tbody">
+          <!-- <h1 class="heading1">Welcome to category section</h1>
+        <div class="addBtn">
+          <button type="button" name="button" class="btn btnCat"> + add category</button>
+        </div> -->
+
+          <form class="form categoryForm" action="" method="post" name="name" >
+            <input type="text" name="name" value="" placeholder="category name" required>
+            <div class="btn-box">
+              <button type="button" name="button" class="btn categoryAdd">Add</button>
+            </div>
+          </form>
+
+        <table class="table">
+          <thead id="t_head">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Total Deposite</th>
+            <th>date</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody id="tbodyCat" class="tbody">
+
+          </tbody>
+        </table>
+    </div>
+
+
+    <!-- </div>
+
+    <div class="row">
+      <div class="col-1-of-2">
+        <div id="container">
+          <form class="form depositeForm" action="index.html" method="post" name="name" >
+            <h1 class="heading1">add deposite</h1>
+            <input type="text" name="userId" value="" placeholder="user id" required>
+            <input type="text" name="amount" value="" placeholder="amount" required>
+            <input type="text" name="categoryId" value="" placeholder="category id" required>
+            <div class="btn-box">
+              <button type="submit" name="button" class="btn">add</button>
+            </div>
+          </form>
+
+          <div class="side=button">
+            side for deposite
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1-of-2">
+        <div id="container">
+          <form class="form expenseForm" action="index.html" method="post" name="name" >
+            <h1 class="heading1">add expenses</h1>
+            <input type="text" name="userId" value="" placeholder="user id" required>
+            <input type="text" name="given" value="" placeholder="given" required>
+            <input type="" name="categoryId" value="" placeholder="category id" required>
+            <input type="text" name="cost" value="" placeholder="cost" required>
+            <input type="text" name="description" value="" placeholder="description" required>
+            <div class="btn-box">
+              <button type="submit" name="button" class="btn">add</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="side-button">
+          side for expenses
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1-of-2">
+        <div id="container">
+          <form class="form categoryForm" action="index.html" method="post" name="name" >
+            <h1 class="heading1">Create category</h1>
+            <input type="text" name="categoryName" value="" placeholder="category name" required>
+            <div class="btn-box">
+              <button type="submit" name="button" class="btn">Add</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="side-button">
+          side for category
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+    </div> -->
+
+
+    <script src="bundle.js">
+
+    </script>
+
+  </body>
+</html>
